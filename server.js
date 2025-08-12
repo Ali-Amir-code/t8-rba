@@ -24,5 +24,9 @@ app.use("/api/content", contentRoutes);
 
 app.use(errorHandler);
 
+app.get('/', (req, res) => {
+    res.json({msg:'Welcome to the Role Base Access API.'});
+});
+
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
